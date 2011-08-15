@@ -10,13 +10,13 @@ namespace LinqToFile.Flat
     [AttributeUsage(AttributeTargets.Property)]
     public class FlatFileFieldAttribute : FileFieldAttributeBase
     {
-        public FlatFileFieldAttribute(int start, int lenght)
+        public FlatFileFieldAttribute(int start, int length)
         {
             this.Start = start;
-            this.Lenght = lenght;
+            this.Length = length;
         }
 
         public int Start { get; private set; }
-        public int Lenght { get; private set; }
+        public int Length { get; private set; }
     }
 }

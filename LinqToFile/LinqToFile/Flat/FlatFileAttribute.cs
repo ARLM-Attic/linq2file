@@ -32,7 +32,7 @@ namespace LinqToFile.Flat
                         Start = i.Attribute.Start,
                         DateTimeFormat = i.Attribute.DateTimeFormat,
                         NumberFormatProvider = i.Attribute.GetNumberFormat(),
-                        Lenght = i.Attribute.Lenght,
+                        Length = i.Attribute.Length,
                         Type = Type.GetTypeCode(i.PropertyInfo.PropertyType)
                     }).ToList(),
                     stream);

@@ -10,6 +10,6 @@ namespace LinqToFile.Flat
     public class FlatFileMetadata : FileMetadata
     {
         public int Start { get; set; }
-        public int Lenght { get; set; }
+        public int Length { get; set; }
     }
 }

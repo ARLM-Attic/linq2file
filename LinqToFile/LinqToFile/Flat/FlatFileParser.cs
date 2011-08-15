@@ -30,7 +30,7 @@ namespace LinqToFile.Flat
 
         protected override IEnumerable<MetadataValue<FlatFileMetadata>> Split(string line, List<FlatFileMetadata> metadata)
         {
-            return metadata.Select(i => new MetadataValue<FlatFileMetadata> { Item = line.Substring(i.Start, i.Lenght), FieldMetadata = i }).ToList();
+            return metadata.Select(i => new MetadataValue<FlatFileMetadata> { Item = line.Substring(i.Start, i.Length), FieldMetadata = i }).ToList();
         }
     }
 }
