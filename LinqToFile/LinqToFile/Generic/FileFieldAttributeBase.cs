@@ -13,7 +13,6 @@ namespace LinqToFile.Generic
         public string NegativeSign { get; set; }
         public string NumberDecimalSeparator { get; set; }
         public string NumberGroupSeparator { get; set; }
-        public int NumberNegativePattern { get; set; }
         public string PositiveSign { get; set; }
 
         internal NumberFormatInfo GetNumberFormat()
@@ -23,7 +22,6 @@ namespace LinqToFile.Generic
             if (!string.IsNullOrEmpty(this.NumberDecimalSeparator)) numberFormatInfo.NumberDecimalSeparator = this.NumberDecimalSeparator;
             if (!string.IsNullOrEmpty(this.NumberGroupSeparator)) numberFormatInfo.NumberGroupSeparator = this.NumberGroupSeparator;
             if (!string.IsNullOrEmpty(this.PositiveSign)) numberFormatInfo.PositiveSign = this.PositiveSign;
-            if (this.NumberNegativePattern != 0) numberFormatInfo.NumberNegativePattern = this.NumberNegativePattern;
             return numberFormatInfo;
         }
     }

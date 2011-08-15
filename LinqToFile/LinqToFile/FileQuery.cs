@@ -13,7 +13,7 @@ namespace LinqToFile
         private Stream stream;
         private bool disposeStream = true;
 
-        public FileQuery(string path) : this(new FileStream(path, FileMode.Open)) { }
+        public FileQuery(string path) : this(new FileStream(path, FileMode.Open, FileAccess.Read)) { }
 
         public FileQuery(Stream stream)
         {
