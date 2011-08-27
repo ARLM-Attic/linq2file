@@ -11,13 +11,15 @@ namespace LinqToFile
     {
         private FileAttributeBase fileAttribute;
         private Stream stream;
-        private bool disposeStream = true;
+        private bool disposeStream = false;
 
-        public FileQuery(string path) : this(new FileStream(path, FileMode.Open, FileAccess.Read)) { }
+        public FileQuery(string path) : this(new FileStream(path, FileMode.Open, FileAccess.Read)) 
+        {
+            this.disposeStream = true;
+        }
 
         public FileQuery(Stream stream)
         {
-            this.disposeStream = false;
             this.stream = stream;
             this.fileAttribute = typeof(T).GetCustomAttributes(typeof(FileAttributeBase), true).OfType<FileAttributeBase>().FirstOrDefault();
         }
